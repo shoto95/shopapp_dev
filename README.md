@@ -7,5 +7,5 @@ cd frontend
 
 2. 起動
 ```
-npm start
+yarn start
 ```
