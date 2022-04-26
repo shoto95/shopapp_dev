@@ -51,19 +51,19 @@ export class CartBloc extends Bloc<CartState> {
     }
 
     mapToUpdatedState(cart: Cart): CartState {
-        const formatOptions = { style: "currency", currency: "EUR" };
+        const formatOptions = { style: "currency", currency: "JPY" };
 
         return {
             kind: "UpdatedCartState",
             open: this.state.open,
             totalItems: cart.totalItems,
-            totalPrice: cart.totalPrice.toLocaleString("es-ES", formatOptions),
+            totalPrice: cart.totalPrice.toLocaleString("ja-JP", formatOptions),
             items: cart.items.map(cartItem => {
                 return {
                     id: cartItem.id,
                     image: cartItem.image,
                     title: cartItem.title,
-                    price: cartItem.price.toLocaleString("es-ES", formatOptions),
+                    price: cartItem.price.toLocaleString("ja-JP", formatOptions),
                     quantity: cartItem.quantity
                 }
             })
