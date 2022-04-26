@@ -5,8 +5,8 @@ const products = [
     {
         id: "1",
         image:
-            "https://m.media-amazon.com/images/I/81oKhu2bsgL._AC_UL640_FMwebp_QL65_.jpg",
-        title: "Element Blazin LS tee Shirt, Hombre",
+            "https://m.media-amazon.com/images/I/41UoEVfjrcS._AC_UL1000_.jpg",
+        title: "Tシャツ",
         price: 19.95
     },
     {

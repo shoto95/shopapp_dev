@@ -1,10 +1,10 @@
 import React from "react";
-import {makeStyles} from "@material-ui/core/styles";
-import {CircularProgress, Grid, Container, Box, Typography} from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
+import { CircularProgress, Grid, Container, Box, Typography } from "@material-ui/core";
 import ProductItem from "./ProductItem";
 import * as DependenciesProvider from "../../../di/DependenciesProvider";
-import {BlocBuilder} from "../../common/bloc";
-import {ProductsState} from "../ProductsState";
+import { BlocBuilder } from "../../common/bloc";
+import { ProductsState } from "../ProductsState";
 
 const useStyles = makeStyles((theme) => ({
     titleContainer: {
@@ -31,7 +31,9 @@ const ProductList: React.FC = () => {
             bloc.search(filter);
         };
 
-        searchProducts("Element");
+        // 検索用
+        // searchProducts("Element");
+        searchProducts("");
     }, [bloc]);
 
     return (
@@ -60,7 +62,7 @@ const ProductList: React.FC = () => {
                             <Container className={classes.cardGrid} maxWidth="xl">
                                 <Box className={classes.titleContainer}>
                                     <Typography display="inline" variant="h6" component="h2">
-                                        {"Results for "}
+                                        {"検索結果： "}
                                     </Typography>
                                     <Typography
                                         color="primary"
@@ -68,7 +70,7 @@ const ProductList: React.FC = () => {
                                         variant="h6"
                                         component="h2"
                                     >
-                                        "Element"
+                                        {/* "Element" */}
                                     </Typography>
                                 </Box>
                                 <Grid container spacing={2}>

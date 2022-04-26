@@ -1,5 +1,5 @@
 import React from "react";
-import {makeStyles} from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 import {
     Grid,
     Card,
@@ -10,7 +10,7 @@ import {
     Button,
 } from "@material-ui/core";
 import Product from "../../../domain/products/Product";
-import {useCartBloc} from "../../app/App";
+import { useCartBloc } from "../../app/App";
 
 const useStyles = makeStyles((theme) => ({
     card: {
@@ -43,7 +43,7 @@ interface ProductListProps {
     product: Product;
 }
 
-const ProductItem: React.FC<ProductListProps> = ({product}) => {
+const ProductItem: React.FC<ProductListProps> = ({ product }) => {
     const classes = useStyles();
     const bloc = useCartBloc();
 
@@ -60,9 +60,9 @@ const ProductItem: React.FC<ProductListProps> = ({product}) => {
                         {product.title}
                     </Typography>
                     <Typography variant="h6" className={classes.productPrice}>
-                        {product.price.toLocaleString("es-ES", {
+                        {product.price.toLocaleString("ja-JP", {
                             style: "currency",
-                            currency: "EUR",
+                            currency: "JPY",
                         })}
                     </Typography>
                 </CardContent>
@@ -72,7 +72,7 @@ const ProductItem: React.FC<ProductListProps> = ({product}) => {
                         color="primary"
                         onClick={() => bloc.addProductToCart(product)}
                     >
-                        Add to Cart
+                        カートに追加
                     </Button>
                 </CardActions>
             </Card>
